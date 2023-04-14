@@ -15,13 +15,11 @@
             All you need to do is input either information and click on the calculate button.</p>
         <div class="container">
             <div class="column">
-                <input id="SofaInput" type="text" class="my-textboxes" placeholder='Your sofa distance (")'/>
-            </div>
-            <div class="column-inside">
-                <button onclick="calculate()" id="calculateBtn">Calculate!</button>
+                <input id="SofaInput" type="text" onblur="calculatedTv()" class="my-textboxes"
+                    placeholder='Your sofa distance (")' />
             </div>
             <div class="column">
-                <input id="tvSizeInput" type="text" class="my-textboxes" placeholder='Insert your TV size (")'/>
+                <input id="tvSizeInput" type="text" onblur="calculatedDistance()" class="my-textboxes" placeholder='Insert your TV size (")' />
             </div>
         </div>
     </div>
