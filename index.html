@@ -8,18 +8,24 @@
 </head>
 
 <body>
+    <div class="border-line">
+        <h3>TV Size Guide</h3>
+    </div>
     <div class="page-container">
         <h1 id="page-title">Find perfect TV size</h1>
         <h2>Are you buying a TV and wondering what size it should be? You came to the right place!</h2>
         <p>This calculator will tell you your ideal TV size based on your sofa distance and vice versa.
-            All you need to do is input either information and click on the calculate button.</p>
+            All you need to do is input either information on the field below</p>
         <div class="container">
             <div class="column">
                 <input id="SofaInput" type="text" onblur="calculatedTv()" class="my-textboxes"
-                    placeholder='Your sofa distance (metres)' />
+                    placeholder='Your sofa distance' />
+                <p style="display: inline-block; margin-left: 10px;">metres</p>
             </div>
             <div class="column">
-                <input id="tvSizeInput" type="text" onblur="calculatedDistance()" class="my-textboxes" placeholder='Insert your TV size (")' />
+                <input id="tvSizeInput" type="text" onblur="calculatedDistance()" class="my-textboxes"
+                    placeholder='Insert your TV size' />
+                <p style="display: inline-block; margin-left: 10px;"> inches</p>
             </div>
         </div>
     </div>
