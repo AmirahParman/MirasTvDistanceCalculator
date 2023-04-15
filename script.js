@@ -40,4 +40,3 @@ function calculatedDistance(){
 
     document.getElementById("SofaInput").value= ConvertedSofaDistance.toFixed(2);   
 }
-
