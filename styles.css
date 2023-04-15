@@ -50,10 +50,6 @@ h3 {
     text-align: center;
 }
 
-div.page-container {
-    padding:0.5rem 20rem;
-}
-
 .border-line{
     border-bottom:  1px solid #dddddd;
 }
@@ -68,3 +64,10 @@ div.page-container {
     margin-top: 10px;
     opacity: 70%;
 }
+
+  /* Medium devices (desktops) */
+  @media only screen and (min-width: 992px) {
+    div.page-container {
+        padding:0.5rem 20rem;
+    }
+  }
