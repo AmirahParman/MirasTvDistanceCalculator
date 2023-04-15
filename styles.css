@@ -22,8 +22,8 @@ h2
 
 h3 {
     vertical-align: bottom;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .container {
@@ -51,7 +51,7 @@ h3 {
 }
 
 div.page-container {
-    padding:1.5rem 20rem;
+    padding:0.5rem 20rem;
 }
 
 .border-line{
@@ -60,4 +60,11 @@ div.page-container {
 
 .diagramContainer{
     padding: 2rem 0rem;
+}
+
+.small-print{
+    font-size: xx-small;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 70%;
 }
