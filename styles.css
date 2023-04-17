@@ -3,21 +3,23 @@ body {
     background-image: #dddddd
 }
 
-p, span {
-    color:#00000080;
+p,
+span {
+    color: #00000080;
 }
 
-h1, h2, h4 {    
-    color:#000000;
+h1,
+h2,
+h4 {
+    color: #000000;
 }
 
 #page-title {
     text-align: center;
 }
 
-h2
-{
-    font-weight: lighter ;
+h2 {
+    font-weight: lighter;
 }
 
 h3 {
@@ -39,8 +41,8 @@ h3 {
 .column-inside {
     flex: 1;
     display: flex;
-	justify-content: center;
-	align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .my-textboxes {
@@ -50,24 +52,37 @@ h3 {
     text-align: center;
 }
 
-.border-line{
-    border-bottom:  1px solid #dddddd;
+.border-line {
+    border-bottom: 1px solid #dddddd;
 }
 
-.diagramContainer{
+.diagramContainer {
     padding: 2rem 0rem;
 }
 
-.small-print{
+.small-print {
     font-size: xx-small;
     text-align: center;
     margin-top: 10px;
     opacity: 70%;
 }
 
-  /* Medium devices (desktops) */
-  @media only screen and (min-width: 992px) {
+
+/*Small devices*/
+@media screen and (max-width: 580px) {
     div.page-container {
-        padding:0.5rem 20rem;
+        padding: 0.1rem 1rem;
     }
-  }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Medium devices (desktops) */
+@media only screen and (min-width: 992px) {
+    div.page-container {
+        padding: 0.5rem 20rem;
+    }
+}
