@@ -68,7 +68,7 @@ h3 {
 
 
 /*Small devices*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
     div.page-container {
         padding: 0.1rem 1rem;
     }
