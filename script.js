@@ -28,11 +28,10 @@ function calculatedTv() {
 
     document.getElementById("tvSizeInput").value = convertedTvSize;
 
-    updateCouchDistanceInDiagram(sofaDistance);
-    updateCouchDistanceDiagramInch(convertMetersToInches(sofaDistance).toFixed(2));
-    updateTvSizeInDiagram(convertedTvSize);
+    updateDiagram("metreDiagram", sofaDistance);
+    updateDiagram("inchDiagramConvert", convertMetersToInches(sofaDistance).toFixed(2));
+    updateDiagram("inchTvDiagram", convertedTvSize);
 }
-
 
 function calculatedDistance() {
     let tvInputTextBox = document.getElementById("tvSizeInput");
@@ -45,19 +44,11 @@ function calculatedDistance() {
 
     document.getElementById("SofaInput").value = convertedSofaDistance;
 
-    updateCouchDistanceInDiagram(convertedSofaDistance);
-    updateCouchDistanceDiagramInch(convertMetersToInches(convertedSofaDistance).toFixed(2));
-    updateTvSizeInDiagram(tvSizeInserted);
+    updateDiagram("metreDiagram", convertedSofaDistance);
+    updateDiagram("inchDiagramConvert", convertMetersToInches(convertedSofaDistance).toFixed(2));
+    updateDiagram("inchTvDiagram", tvSizeInserted);
 }
 
-function updateCouchDistanceInDiagram(newValue) {
-    document.getElementById("metreDiagram").innerHTML = newValue;
-}
-
-function updateCouchDistanceDiagramInch(newValueIch) {
-    document.getElementById("inchDiagramConvert").innerHTML= newValueIch
-}
-
-function updateTvSizeInDiagram(newValueTV){
-    document.getElementById("inchTvDiagram").innerHTML= newValueTV;
+function updateDiagram(idOfElement, newValue) {
+    document.getElementById(idOfElement).innerHTML = newValue;
 }
