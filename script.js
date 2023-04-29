@@ -1,13 +1,13 @@
-const distanceFormula = 1.2;
+import {distanceFormula, tvSizeCalculator, distanceLengthCalculator} from "./Module/calculation.js"
 
-//to calculate TV size
-function tvSizeCalculator(idealDistance) {
-    return idealDistance / distanceFormula;
-}
+attachEventListenersToTextBoxes();
 
-//to calculate distance
-function distanceLengthCalculator(idealSize) {
-    return idealSize * distanceFormula;
+function attachEventListenersToTextBoxes() {
+    let sofaTextbox = document.getElementById('sofa-input');
+    sofaTextbox.addEventListener('blur', calculatedTv);
+
+    let tvTextbox = document.getElementById('tv-size-input');
+    tvTextbox.addEventListener('blur', calculatedDistance);
 }
 
 function convertMetersToInches(valueInMetres) {
@@ -19,14 +19,14 @@ function convertInchToMeter(valueInIches) {
 }
 
 function calculatedTv() {
-    let sofaInputTextBox = document.getElementById("SofaInput");
+    let sofaInputTextBox = document.getElementById("sofa-input");
     let sofaDistance = sofaInputTextBox.value;
 
     let tvSize = tvSizeCalculator(sofaDistance);
 
     let convertedTvSize = Math.round(convertMetersToInches(tvSize));
 
-    document.getElementById("tvSizeInput").value = convertedTvSize;
+    document.getElementById("tv-size-input").value = convertedTvSize;
 
     updateDiagram("metreDiagram", sofaDistance);
     updateDiagram("inchDiagramConvert", convertMetersToInches(sofaDistance).toFixed(2));
@@ -34,7 +34,7 @@ function calculatedTv() {
 }
 
 function calculatedDistance() {
-    let tvInputTextBox = document.getElementById("tvSizeInput");
+    let tvInputTextBox = document.getElementById("tv-size-input");
     let tvSizeInserted = tvInputTextBox.value;
 
     let distanceSofa = distanceLengthCalculator(tvSizeInserted);
@@ -42,7 +42,7 @@ function calculatedDistance() {
 
     let convertedSofaDistance = convertInchToMeter(distanceSofa).toFixed(2);
 
-    document.getElementById("SofaInput").value = convertedSofaDistance;
+    document.getElementById("sofa-input").value = convertedSofaDistance;
 
     updateDiagram("metreDiagram", convertedSofaDistance);
     updateDiagram("inchDiagramConvert", convertMetersToInches(convertedSofaDistance).toFixed(2));
