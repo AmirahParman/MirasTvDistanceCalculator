@@ -1,4 +1,4 @@
-export const distanceFormula = 1.2;
+const distanceFormula = 1.2;
 
 //to calculate TV size
 export function tvSizeCalculator(idealDistance) {

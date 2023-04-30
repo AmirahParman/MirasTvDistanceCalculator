@@ -1,4 +1,4 @@
-import {distanceFormula, tvSizeCalculator, distanceLengthCalculator} from "./Module/calculation.js"
+import {tvSizeCalculator, distanceLengthCalculator} from "./Module/calculation.js"
 
 attachEventListenersToTextBoxes();
 
