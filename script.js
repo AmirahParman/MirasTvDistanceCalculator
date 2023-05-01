@@ -1,4 +1,5 @@
 import {tvSizeCalculator, distanceLengthCalculator} from "./Module/calculation.js"
+import {convertMetersToInches, convertInchToMeter} from "./Module/unit-coversion.js"
 
 attachEventListenersToTextBoxes();
 
@@ -8,14 +9,6 @@ function attachEventListenersToTextBoxes() {
 
     let tvTextbox = document.getElementById('tv-size-input');
     tvTextbox.addEventListener('blur', calculatedDistance);
-}
-
-function convertMetersToInches(valueInMetres) {
-    return valueInMetres * 39.37;
-}
-
-function convertInchToMeter(valueInIches) {
-    return valueInIches * 0.0254;
 }
 
 function calculatedTv() {
